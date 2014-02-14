@@ -1,0 +1,40 @@
+        <!-- End Unity Data -->
+        </tbody>
+      </table>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    /* Add Icons to type */
+    $(".networking .logtype").append("  <i class=\"fa fa-globe\"></i>  ");
+    $(".ai .logtype").append("  <i class=\"fa fa-cogs\"></i>  ");
+    $(".audio .logtype").append("  <i class=\"fa fa-volume-up\"></i>  ");
+    $(".gamelogic .logtype").append("  <i class=\"fa fa-puzzle-piece\"></i>  ");
+   </script>
+   <script>
+    $(".log").click(function(){
+      $(".log-selected").removeClass("log-selected");
+      $(this).addClass("log-selected");
+    });
+ 
+    function toggleVisibilityOfClass(className)
+    {
+      console.log(className);
+      $(".log").each(function(index)
+      {
+        
+        if( !$(this).hasClass(className))
+        {
+          $(this).addClass("log-hidden");
+          console.log("Hidden");
+        }
+        else
+        {
+          $(this).removeClass("log-hidden");
+          console.log("Not Hidden");
+        }
+      });
+    }
+    </script>
+  </body>
+</html>

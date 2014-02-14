@@ -1,0 +1,154 @@
+@log-error-color: #d9534f;
+@log-error-color-hover: lighten(@log-error-color, 13.5%);
+
+@log-basic-color: #bbb;
+@log-basic-color-hover: lighten(@log-basic-color, 13.5%);
+
+@log-warning-color: #f0ad4e;
+@log-warning-color-hover: lighten(@log-warning-color, 13.5%);
+
+@log-networking-color: #428bca;
+@log-networking-color-hover: lighten(@log-networking-color, 13.5%);
+
+@log-ai-color: #5cb85c;
+@log-ai-color-hover: lighten(@log-ai-color, 13.5%);
+
+
+@btn-audio-first: #b063ff;
+@btn-audio-second: #8821f1;
+@btn-audio-third: #c68fff;
+@btn-audio-fourth: #6700d0;
+
+@btn-logic-first: #ff6a05;
+@btn-logic-second: #a24201;
+@btn-logic-third: #ff934a;
+@btn-logic-fourth: #652901;
+
+
+@icon-type-size: 18px;
+
+body
+{
+	.btn{
+		width:  200px;
+	}
+}
+
+.table 
+{
+	.log-selected
+	{
+		-webkit-box-shadow: inset 0px 15px 34px 63px rgba(0,0,0,0.6);
+		-moz-box-shadow: inset 0px 15px 34px 63px rgba(0,0,0,0.6);
+		box-shadow: inset 0px 15px 34px 63px rgba(0,0,0,0.6);
+		border: 5px solid black;
+	}
+
+
+	.ai
+	{
+
+	}
+
+	.audio
+	{
+
+	}
+
+	.gamelogic
+	{
+
+	}
+
+	.log-hidden
+	{
+		display: none; 
+	}
+}
+
+body
+{
+	table
+	{
+		tbody
+		{
+			.log-selected
+			{
+				td {
+					background-color: #d2d2d2 !important;
+				}
+			}
+		}
+
+	}
+}
+
+
+
+.btn-audio 
+{
+   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: @btn-audio-first;
+  *background-color: @btn-audio-second;
+  background-image: -moz-linear-gradient(top, @btn-audio-third, @btn-audio-second);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@btn-audio-third), to(@btn-audio-second));
+  background-image: -webkit-linear-gradient(top, @btn-audio-third, @btn-audio-second);
+  background-image: -o-linear-gradient(top, @btn-audio-third, @btn-audio-second);
+  background-image: linear-gradient(to bottom, @btn-audio-third, @btn-audio-second);
+  background-repeat: repeat-x;
+  border-color: @btn-audio-second @btn-audio-second #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-audio:hover,
+.btn-audio:focus,
+.btn-audio:active,
+.btn-audio.active,
+.btn-audio.disabled,
+.btn-audio[disabled] {
+  color: #ffffff;
+  background-color: @btn-audio-second;
+  *background-color: #151515;
+}
+
+.btn-audio:active,
+.btn-audio.active {
+  background-color: #080808 \9;
+}
+
+.btn-logic 
+{
+   color: #ffffff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: @btn-logic-first;
+  *background-color: @btn-logic-second;
+  background-image: -moz-linear-gradient(top, @btn-logic-third, @btn-logic-second);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@btn-logic-third), to(@btn-logic-second));
+  background-image: -webkit-linear-gradient(top, @btn-logic-third, @btn-logic-second);
+  background-image: -o-linear-gradient(top, @btn-logic-third, @btn-logic-second);
+  background-image: linear-gradient(to bottom, @btn-logic-third, @btn-logic-second);
+  background-repeat: repeat-x;
+  border-color: @btn-logic-second @btn-logic-second #000000;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-logic:hover,
+.btn-logic:focus,
+.btn-logic:active,
+.btn-logic.active,
+.btn-logic.disabled,
+.btn-logic[disabled] {
+  color: #ffffff;
+  background-color: @btn-logic-second;
+  *background-color: #151515;
+}
+
+.btn-logic:active,
+.btn-logic.active {
+  background-color: #080808 \9;
+}

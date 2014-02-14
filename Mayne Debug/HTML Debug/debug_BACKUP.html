@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mayne HTML Debug</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/debug.css" rel="stylesheet" media="screen">
+    <link href="logs.html" rel="appendix">
+  </head>
+  <body>
+      <button type="button" id="allBtn" class="btn btn-default btn-lg">All</button>
+      <button type="button" id="nonBtn" class="btn btn-inverse btn-lg">None</button>
+      <button type="button" id="warningBtn" class="btn btn-warning btn-lg">Warning</button>
+      <button type="button" id="errorsBtn" class="btn btn-danger btn-lg">Errors</button>
+      <button type="button" id="netwrokingBtn" class="btn btn-primary btn-lg">Networking</button>
+      <button type="button" id="aiBtn" class="btn btn-success btn-lg">AI</button>
+      <button type="button" id="errorsBtn" class="btn btn-audio btn-lg">Audio</button>
+      <button type="button" id="errorsBtn" class="btn btn-logic btn-lg">Game Logic</button>
+    <div class="UnityContent">
+      <table class="table table-striped table-bordered table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Type</th>
+            <th>Message</th>
+            <th>Sender</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- Begin Unity Data -->
+
+        <!-- End Unity Data -->
+        </tbody>
+      </table>
+    </div>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var vTimeOut;
+
+      $(function() {
+        vTimeOut= setTimeout(startRefresh, 600)
+      });
+
+
+      function startRefresh() {
+        clearInterval(vTimeOut);
+        vTimeOut= setTimeout(startRefresh, 600);
+         location.reload();
+      }
+      </script>
+   
+    <script>
+    $(".log").click(function(){
+      $(".log-selected").removeClass("log-selected");
+      $(this).addClass("log-selected");
+    });
+ 
+
+    $("#nonBtn").click(function(){
+        $(".log").each(function(index) {
+          $(this).addClass("log-hidden");
+        });
+      });
+
+     $("#allBtn").click(function(){
+        $(".log").each(function(index ) {
+          $(this).removeClass("log-hidden");
+        });
+      });
+
+     $("#netwrokingBtn").click(function(){
+        $(".log").each(function(index ) {
+          if(!$(this).hasClass("log-networking")) 
+            $(this).addClass("log-hidden");
+          else
+            $(this).removeClass("log-hidden");
+        });
+      });
+
+      $("#aiBtn").click(function(){
+        $(".log").each(function(index ) {
+          if(!$(this).hasClass("log-ai")) 
+            $(this).addClass("log-hidden");
+          else
+            $(this).removeClass("log-hidden");
+        });
+      });
+
+      $("#warningBtn").click(function(){
+        $(".log").each(function(index ) {
+          if(!$(this).hasClass("log-warning")) 
+            $(this).addClass("log-hidden");
+          else
+            $(this).removeClass("log-hidden");
+        });
+      });
+
+       $("#errorsBtn").click(function(){
+        $(".log").each(function(index ) {
+          if(!$(this).hasClass("log-error")) 
+            $(this).addClass("log-hidden");
+          else
+            $(this).removeClass("log-hidden");
+        });
+      });
+    </script>
+  </body>
+</html>
